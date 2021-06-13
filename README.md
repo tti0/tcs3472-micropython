@@ -25,6 +25,7 @@ light_sensor = tcs3472(bus, address)
 ```
 
 `bus` should be a `machine.I2C` bus object *(required)*
+
 `address` should be a 7-bit hexadecimal value: the I²C address of the sensor *(optional; default `0x29`)*
 
 
@@ -44,7 +45,7 @@ bus = machine.I2C(sda=machine.Pin(4), scl=machine.Pin(5)) # adjust pin numbers a
 tcs = tcs3472(bus)
 
 print("Light:", tcs.light())
-print("RGB:", tcs.rgb(), "\n")
+print("RGB:", tcs.rgb())
 ```
 
 ## Copyright/Licensing
